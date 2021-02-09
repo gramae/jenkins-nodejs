@@ -14,9 +14,9 @@ job('NodeJS Docker example') {
     }
     steps {
         dockerBuildAndPublish {
-            repositoryName('jed.ocir.io/orasenatdpltintegration03/nodejs-jenkins')
+            repositoryName('gramae/nodejs-jenkins')
             tag('${GIT_REVISION,length=9}')
-            registryCredentials('ocir')
+            registryCredentials('dockerhub')
             forcePull(false)
             forceTag(false)
             createFingerprints(false)
